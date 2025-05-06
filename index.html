@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+[15:53, 05/05/2025] Jado❤️: <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -15,7 +15,7 @@
       <a href="#" class="logo">Portfolio</a>
       
       <!-- Mobile Menu Button -->
-      <button class="mobile-menu-button" aria-label="Toggle menu">
+      <button class="mobile-menu-button" aria-label="Toggle menu" id="mobile-menu-btn">
         <i class="fas fa-bars" id="menu-icon"></i>
         <i class="fas fa-times hidden" id="close-icon"></i>
       </button>
@@ -29,17 +29,17 @@
       </nav>
       
       <!-- Desktop CTA Button -->
-      <button class="btn btn-primary desktop-only">Get in Touch</button>
+      <button class="btn btn-primary desktop-only" onclick="location.href='#contact'">Get in Touch</button>
     </div>
     
     <!-- Mobile Menu -->
     <div class="mobile-menu hidden" id="mobile-menu">
-      <nav class="container">
-        <a href="#" class="nav-link-mobile">Home</a>
-        <a href="#about" class="nav-link-mobile">About</a>
-        <a href="#projects" class="nav-link-mobile">Projects</a>
-        <a href="#contact" class="nav-link-mobile">Contact</a>
-        <button class="btn btn-primary mobile-cta">Get in Touch</button>
+      <nav class="container mobile-nav-container">
+        <a href="#" class="nav-link-mobile" onclick="toggleMobileMenu()">Home</a>
+        <a href="#about" class="nav-link-mobile" onclick="toggleMobileMenu()">About</a>
+        <a href="#projects" class="nav-link-mobile" onclick="toggleMobileMenu()">Projects</a>
+        <a href="#contact" class="nav-link-mobile" onclick="toggleMobileMenu()">Contact</a>
+       <!--<button class="btn btn-primary mobile-cta" onclick="location.href='#contact';toggleMobileMenu();">Get in Touch</button> !-->
       </nav>
     </div>
   </header>
@@ -61,10 +61,10 @@
           <p class="hero-subtitle">Web Developer & Designer</p>
           <p class="hero-description">I create beautiful and functional websites that help businesses grow.</p>
           <div class="hero-buttons">
-            <button class="btn btn-primary">
+            <button class="btn btn-primary" onclick="location.href='#projects'">
               View My Work <i class="fas fa-arrow-right"></i>
             </button>
-            <button class="btn btn-outline">Contact Me</button>
+            <button class="btn btn-outline" onclick="location.href='#contact'">Contact Me</button>
           </div>
         </div>
       </div>
@@ -132,7 +132,7 @@
         <!-- Project 1 -->
         <div class="project-card">
           <div class="project-image">
-            <img src="assets/OnlineParking.jpg" alt="Online parking system">
+            <img src="assets/OnlineParking.jpg" alt="Online parking system" class="responsive-img">
           </div>
           <div class="project-content">
             <h3 class="project-title">Online parking system</h3>
@@ -154,19 +154,19 @@
         <!-- Project 2 -->
         <div class="project-card">
           <div class="project-image">
-            <img src="assets/bin.webp" alt="Ecobin ai">
+            <img src="assets/bin.webp" alt="Ecobin ai" class="responsive-img">
           </div>
           <div class="project-content">
-            <h3 class="project-title">Ecobin ai</h3>
+            <h3 class="project-title">Ecobin ai</h3>
             <p class="project-description">
-                An AI-powered waste classification system that helps users sort waste into categories (organic, plastic, etc.) for better recycling and sustainability.
+                An AI-powered waste classification system that helps users sort waste into categories (organic, plastic, etc.) for better recycling and sustainability.
             </p>
             <div class="project-tags">
               <span class="project-tag">HTML/CSS</span>
               <span class="project-tag">JavaScript</span>
               <span class="project-tag">Animation</span>
             </div>
-            <button class="btn btn-primary">
+            <button class="btn btn-primary btn-mobile-full">
               View Project <i class="fas fa-arrow-right"></i>
             </button>
           </div>
@@ -175,7 +175,7 @@
         <!-- Project 3 -->
         <div class="project-card">
           <div class="project-image">
-            <img src="assets/fitness.jpg" alt="Tracking fitness">
+            <img src="assets/fitness.jpg" alt="Tracking fitness" class="responsive-img">
           </div>
           <div class="project-content">
             <h3 class="project-title">Tracking fitness</h3>
@@ -187,7 +187,7 @@
               <span class="project-tag">Firebase</span>
               <span class="project-tag">Chart.js</span>
             </div>
-            <button class="btn btn-primary">
+            <button class="btn btn-primary btn-mobile-full">
               View Project <i class="fas fa-arrow-right"></i>
             </button>
           </div>
@@ -258,20 +258,24 @@
           <form class="contact-form" id="contact-form">
             <div class="form-group">
               <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Your name" required>
+              <input type="text" id="name" name="name" placeholder="Your name" required minlength="2" maxlength="50">
+              <span class="error-message" id="name-error"></span>
             </div>
             
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="Your email" required>
+              <input type="email" id="email" name="email" placeholder="Your email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+              <span class="error-message" id="email-error"></span>
             </div>
             
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Your message" required></textarea>
+              <textarea id="message" name="message" placeholder="Your message" required minlength="10" maxlength="500"></textarea>
+              <span class="error-message" id="message-error"></span>
             </div>
             
-            <button type="submit" class="btn btn-secondary">Send Message</button>
+            <button type="submit" class="btn btn-secondary" id="submit-form">Send Message</button>
+            <div class="form-status" id="form-status"></div>
           </form>
         </div>
       </div>
