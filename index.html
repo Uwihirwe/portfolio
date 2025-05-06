@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="header">
+    <div class="container">
+      <a href="#" class="logo">Portfolio</a>
+      
+      <!-- Mobile Menu Button -->
+      <button class="mobile-menu-button" aria-label="Toggle menu">
+        <i class="fas fa-bars" id="menu-icon"></i>
+        <i class="fas fa-times hidden" id="close-icon"></i>
+      </button>
+      
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav">
+        <a href="#" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      
+      <!-- Desktop CTA Button -->
+      <button class="btn btn-primary desktop-only">Get in Touch</button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden" id="mobile-menu">
+      <nav class="container">
+        <a href="#" class="nav-link-mobile">Home</a>
+        <a href="#about" class="nav-link-mobile">About</a>
+        <a href="#projects" class="nav-link-mobile">Projects</a>
+        <a href="#contact" class="nav-link-mobile">Contact</a>
+        <button class="btn btn-primary mobile-cta">Get in Touch</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Profile Image (Shows first on mobile) -->
+        <div class="hero-image">
+          <div class="profile-image">
+            <img src="assets/samantha.jpg" alt="Profile">
+          </div>
+        </div>
+        
+        <!-- Hero Text -->
+        <div class="hero-content">
+          <h1 class="hero-title">Hi, I'm <span class="text-primary">Samantha</span></h1>
+          <p class="hero-subtitle">Web Developer & Designer</p>
+          <p class="hero-description">I create beautiful and functional websites that help businesses grow.</p>
+          <div class="hero-buttons">
+            <button class="btn btn-primary">
+              View My Work <i class="fas fa-arrow-right"></i>
+            </button>
+            <button class="btn btn-outline">Contact Me</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">About Me</h2>
+        <div class="section-divider"></div>
+      </div>
+      
+      <div class="about-grid">
+        <!-- About Image -->
+        <div class="about-image">
+          <img src="assets/samantha.jpg" alt="About Me">
+        </div>
+        
+        <!-- About Content -->
+        <div class="about-content">
+          <div class="about-info">
+            <h3 class="about-subtitle">Fun fact about me</h3>
+            <p class="about-text">
+                -I love eating |<br>
+                -I sing badly but am passionate at karaoke nights
+            </p>
+           <!-- <p class="about-text">
+              When I'm not coding, you'll find me [Your Hobbies/Interests]. I believe in continuous learning 
+              and staying updated with the latest technologies.
+            </p> -->
+          </div>
+          
+          <div class="skills">
+            <h3 class="about-subtitle">My Skills</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">HTML</span>
+              <span class="skill-tag">CSS</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">UI/UX Design</span>
+              <span class="skill-tag">Figma</span>
+              <span class="skill-tag">Responsive Design</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">My Projects</h2>
+        <div class="section-divider"></div>
+        <p class="section-description">
+          Here are some of my recent projects. Each one was built to solve a specific problem.
+        </p>
+      </div>
+      
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/OnlineParking.jpg" alt="Online parking system">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Online parking system</h3>
+            <p class="project-description">
+                A smart web-based platform that allows users to book and manage parking spaces in real-time. It reduces traffic congestion and improves urban mobility. responsive website for a local business
+                with modern design and SEO optimization.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">Node.js</span>
+              <span class="project-tag">MongoDB</span>
+            </div>
+            <button class="btn btn-primary">
+              View Project <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+        
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/bin.webp" alt="Ecobin ai">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Ecobin ai</h3>
+            <p class="project-description">
+                An AI-powered waste classification system that helps users sort waste into categories (organic, plastic, etc.) for better recycling and sustainability.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">HTML/CSS</span>
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">Animation</span>
+            </div>
+            <button class="btn btn-primary">
+              View Project <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+        
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/fitness.jpg" alt="Tracking fitness">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Tracking fitness</h3>
+            <p class="project-description">
+                A responsive dashboard app that logs workouts, tracks metrics (steps, calories, heart rate), and visualizes progress trends over time to help users stay motivated and meet their goals.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">Firebase</span>
+              <span class="project-tag">Chart.js</span>
+            </div>
+            <button class="btn btn-primary">
+              View Project <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="section-divider"></div>
+        <p class="section-description">
+          Have a project in mind or just want to say hello? Feel free to reach out!
+        </p>
+      </div>
+      
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <h3 class="contact-subtitle">Contact Information</h3>
+          <p class="contact-text">
+            Feel free to reach out through the form or directly via email or social media.
+          </p>
+          
+          <div class="contact-methods">
+            <!-- Email -->
+            <div class="contact-method">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <p class="contact-method-title">Email</p>
+                <p class="contact-method-value">chancesamantha19@gmail.com
+                </p>
+              </div>
+            </div>
+            
+            <!-- LinkedIn -->
+            <div class="contact-method">
+              <div class="contact-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </div>
+              <div class="contact-details">
+                <p class="contact-method-title">LinkedIn</p>
+                <p class="contact-method-value">linkedin.com/in/samantha</p>
+              </div>
+            </div>
+            
+            <!-- GitHub -->
+            <div class="contact-method">
+              <div class="contact-icon">
+                <i class="fab fa-github"></i>
+              </div>
+              <div class="contact-details">
+                <p class="contact-method-title">GitHub</p>
+                <p class="contact-method-value">github.com/samantha</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Contact Form -->
+        <div class="contact-form-container">
+          <h3 class="contact-subtitle">Send Me a Message</h3>
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Your email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Your message" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-secondary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="copyright">© 2024 Your Name. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#" class="social-link" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="social-link" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="#" class="social-link" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="#" class="social-link" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
